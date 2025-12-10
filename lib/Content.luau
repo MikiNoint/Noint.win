@@ -1,4 +1,6 @@
-local NointContent = {};
+local NointContent = {
+    Logo = "rbxassetid://138954762808484",
+};
 
 function NointContent:Init()
     if not isfolder("Noint") then

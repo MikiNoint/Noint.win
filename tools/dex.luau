@@ -1,4 +1,4 @@
--- https://github.com/LorekeeperZinnia/Dex > Modify by Miki (+Safe to use)
+-- https://github.com/LorekeeperZinnia/Dex
 
 --[[
 	Dex
@@ -12,7 +12,7 @@ if not isfolder("Noint-Darkdex") then
 	makefolder("Noint-Darkdex");
 end;
 
-local repo = "https://raw.githubusercontent.com/MikiNoint/Noint.lol/refs/heads/main/Icons/%s.png";
+local repo = "https://raw.githubusercontent.com/MikiNoint/Noint.lol/refs/heads/main/Icons/%s";
 local LoadImage = function(assetid)
 	local id = string.match(assetid,'%d+');
 

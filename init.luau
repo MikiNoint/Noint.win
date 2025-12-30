@@ -659,6 +659,17 @@ if GameDatabase then
 	log:add("Script Hash: "..tostring(GameDatabase.Hash));
 	log:add("Universe Id: "..tostring(GameDatabase.UniverseId));
 	
+	if NOINT_INSTANT_LOAD or GameDatabase.InstantLoad then
+
+		log:add("Instant Load is enabled");
+
+		local LoaderAPI = string.format("https://api.luarmor.net/files/v3/loaders/%s.lua",GameDatabase.Hash);
+
+		local Function = loadstring(game:HttpGet(LoaderAPI));
+		
+		return pcall(Function);
+	end;
+
 	LuarmorAPI.script_id = GameDatabase.Hash;
 	
 	local LoaderAPI = string.format("https://api.luarmor.net/files/v3/loaders/%s.lua",GameDatabase.Hash);

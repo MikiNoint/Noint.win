@@ -16,7 +16,7 @@ local ref_date = clonefunction(os.date);
 local ref_tick = clonefunction(tick);
 
 identifyexecutor = getexecutorname or function()
-    return "Seli\1ware" , 1;
+    return "Seli\0ware" , 1;
 end;
 
 -- Create Noint Log API --

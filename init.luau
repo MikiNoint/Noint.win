@@ -64,17 +64,7 @@ setclipboard = setclipboard or toclipboard or set_clipboard or (Clipboard and Cl
 request = request or http_request or (syn and syn.request) or (http and http.request) or (fluxus and fluxus.request);
 sethiddenproperty = sethiddenproperty or set_hidden_property or set_hidden_prop;
 gethiddenproperty = gethiddenproperty or get_hidden_property or get_hidden_prop;
-gethui = gethui or get_hidden_gui or function()
-	local xui;
-	
-	xpcall(function()
-		xui = cloneref(game.CoreGui);
-	end,function()
-		xui = cloneref(LocalPlayer.PlayerGui);
-	end);
-	
-	return xui;
-end;
+gethui = gethui or get_hidden_gui;
 
 getcustomasset = getcustomasset or getsynasset or function(f) return "" end;
 
